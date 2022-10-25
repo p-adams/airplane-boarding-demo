@@ -1,6 +1,6 @@
 interface BoardingRowData {
   priority: string;
-  passenger: { [key: string]: any };
+  passenger: { name: string; seat: string };
 }
 
 interface BoardingRow {
