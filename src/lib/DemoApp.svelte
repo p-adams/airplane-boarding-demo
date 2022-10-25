@@ -1,5 +1,5 @@
 <script lang="ts">
-  import BoardingRow from "./BoardingRow.svelte";
+  import BoardingRow from "./BoardingRow/index.svelte";
 </script>
 
 <div>
