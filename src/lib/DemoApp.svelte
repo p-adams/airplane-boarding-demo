@@ -1,9 +1,9 @@
 <script lang="ts">
-  import BoardingQueue from "./BoardingQueue.svelte";
+  import BoardingRow from "./BoardingRow.svelte";
 </script>
 
 <div>
-  <BoardingQueue />
+  <BoardingRow />
 </div>
 
 <style>
