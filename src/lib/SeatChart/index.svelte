@@ -1,14 +1,11 @@
 <script lang="ts">
   import { range } from "./utils";
-  function seatRow() {
-    const rr: RRange = { start: 22, limit: 38, exclude: [33] };
-    return [...range(rr)];
-  }
+  const seatRow = [...range({ start: 22, limit: 38, exclude: [33] })];
 </script>
 
 <div class="Seat-chart">
   <div class="Port">
-    {#each seatRow() as row}
+    {#each seatRow as row}
       <div class="Row-label Port">{row}</div>
       <div class="Seat-row">
         <div class="Seat">a</div>
@@ -19,7 +16,7 @@
   </div>
   <div class="Aisle" />
   <div class="Starboard">
-    {#each seatRow() as row}
+    {#each seatRow as row}
       <div class="Row-label Starboard">{row}</div>
       <div class="Seat-row">
         <div class="Seat">d</div>

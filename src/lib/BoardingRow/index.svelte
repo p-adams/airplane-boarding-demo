@@ -1,5 +1,6 @@
 <script lang="ts">
   import { MOCK_ROW as rows } from "./utils";
+  const PASSENGER_LIMIT = 96;
 </script>
 
 <div>
