@@ -17,6 +17,7 @@
       </div>
     {/each}
   </div>
+  <div class="Aisle" />
   <div class="Starboard">
     {#each seatRow() as row}
       <div class="Row-label Starboard">{row}</div>
@@ -31,23 +32,37 @@
 
 <style>
   .Seat-chart {
-    height: 600px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: 1fr 40px 1fr;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 6px;
+    background-color: #e8e9eb;
   }
   .Seat-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+  }
+  .Seat {
+    border: 1px solid gray;
+    width: 24px;
+    font-size: small;
+    font-weight: 900;
   }
   .Row-label {
     font-size: xx-small;
+    font-weight: 900;
   }
   .Row-label.Port {
     text-align: left;
   }
   .Row-label.Starboard {
     text-align: right;
+  }
+  .Aisle {
+    background-color: #cccdc6;
+    margin-left: 4px;
+    margin-right: 4px;
   }
 </style>
