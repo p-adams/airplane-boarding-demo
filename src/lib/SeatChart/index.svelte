@@ -1,4 +1,5 @@
 <script lang="ts">
+  import BoardingRow from "../BoardingRow/index.svelte";
   import { range } from "./utils";
   const seatRow = [...range({ start: 22, limit: 38, exclude: [33] })];
 </script>
@@ -14,7 +15,7 @@
       </div>
     {/each}
   </div>
-  <div class="Aisle" />
+  <div class="Aisle"><BoardingRow /></div>
   <div class="Starboard">
     {#each seatRow as row}
       <div class="Row-label Starboard">{row}</div>
