@@ -1,42 +1,31 @@
 <script lang="ts">
+  import { range } from "./utils";
+  function seatRow() {
+    const rr: RRange = { start: 22, limit: 38, exclude: [33] };
+    return [...range(rr)];
+  }
 </script>
 
 <div class="Seat-chart">
   <div class="Port">
-    <div>22</div>
-    <div>23</div>
-    <div>24</div>
-    <div>25</div>
-    <div>26</div>
-    <div>27</div>
-    <div>28</div>
-    <div>29</div>
-    <div>30</div>
-    <div>31</div>
-    <div>32</div>
-    <div>34</div>
-    <div>35</div>
-    <div>36</div>
-    <div>37</div>
-    <div>38</div>
+    {#each seatRow() as row}
+      <div class="Row-label Port">{row}</div>
+      <div class="Seat-row">
+        <div class="Seat">a</div>
+        <div class="Seat">b</div>
+        <div class="Seat">c</div>
+      </div>
+    {/each}
   </div>
   <div class="Starboard">
-    <div>22</div>
-    <div>23</div>
-    <div>24</div>
-    <div>25</div>
-    <div>26</div>
-    <div>27</div>
-    <div>28</div>
-    <div>29</div>
-    <div>30</div>
-    <div>31</div>
-    <div>32</div>
-    <div>34</div>
-    <div>35</div>
-    <div>36</div>
-    <div>37</div>
-    <div>38</div>
+    {#each seatRow() as row}
+      <div class="Row-label Starboard">{row}</div>
+      <div class="Seat-row">
+        <div class="Seat">d</div>
+        <div class="Seat">e</div>
+        <div class="Seat">f</div>
+      </div>
+    {/each}
   </div>
 </div>
 
@@ -45,5 +34,20 @@
     height: 600px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .Seat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .Row-label {
+    font-size: xx-small;
+  }
+  .Row-label.Port {
+    text-align: left;
+  }
+  .Row-label.Starboard {
+    text-align: right;
   }
 </style>
