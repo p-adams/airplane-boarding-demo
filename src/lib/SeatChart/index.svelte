@@ -1,6 +1,6 @@
 <script lang="ts">
-  import BoardingArea from "../Boarding/BoardingArea.svelte";
-  import { range } from "./utils";
+  import BoardingRow from "../Boarding/BoardingRow.svelte";
+  import { range } from "../../utils";
   const seatRow = [...range({ start: 22, limit: 38, exclude: [33] })];
 </script>
 
@@ -15,7 +15,7 @@
       </div>
     {/each}
   </div>
-  <div class="Aisle"><BoardingArea /></div>
+  <div class="Aisle"><BoardingRow /></div>
   <div class="Starboard">
     {#each seatRow as row}
       <div class="Row-label Starboard">{row}</div>
