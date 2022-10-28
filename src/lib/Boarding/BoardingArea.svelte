@@ -2,11 +2,14 @@
   import { range } from "../SeatChart/utils";
   // import { MOCK_ROW as rows } from "./utils";
   const PASSENGER_LIMIT = 96;
-  const rows = [...range({ limit: 24 })];
+  const boardingRow = [...range({ limit: 24 })];
+  const boardingGate = [...range({ limit: PASSENGER_LIMIT })];
 </script>
 
+<div class="BoardingGate" />
+
 <div class="BoardingRow">
-  {#each rows as row}
+  {#each boardingRow as row}
     <div class="Passenger">{row}</div>
   {/each}
 </div>
