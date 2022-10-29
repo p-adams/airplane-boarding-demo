@@ -6,7 +6,9 @@
 
 <div class="BoardingRow">
   {#each boardingRow as row}
-    <div class="Passenger">{row}</div>
+    <div class="BoardingSlot-wrapper">
+      <div class="BoardingSlot" />
+    </div>
   {/each}
 </div>
 
@@ -15,11 +17,16 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
   }
-  .Passenger {
+  .BoardingSlot-wrapper {
     display: flex;
     justify-content: center;
-    font-size: smaller;
+  }
+  .BoardingSlot {
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
   }
 </style>
