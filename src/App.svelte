@@ -1,12 +1,12 @@
 <script lang="ts">
-  import DemoApp from "./lib/DemoApp.svelte";
+  import AirportArea from "./lib/Airport/AirportArea.svelte";
 </script>
 
 <main>
   <section>
     <h3>Airplane Boarding Demo</h3>
     <div>
-      <DemoApp />
+      <AirportArea />
     </div>
   </section>
 </main>
