@@ -1,13 +1,11 @@
 <script lang="ts">
-  import { range } from "../../utils";
-  export const PASSENGER_LIMIT = 96;
-  const boardingGate = [...range({ limit: PASSENGER_LIMIT })];
+  export let passengers;
 </script>
 
 <div class="BoardingGate-container">
   <div class="BoardingGate">
-    {#each boardingGate as gate}
-      <div class="Gate">{gate}</div>
+    {#each passengers as passenger}
+      <div class="Passenger">{passenger}</div>
     {/each}
   </div>
 </div>
@@ -22,7 +20,7 @@
     gap: 20px;
     margin-left: 10px;
   }
-  .Gate {
+  .Passenger {
     font-size: x-small;
   }
 </style>
